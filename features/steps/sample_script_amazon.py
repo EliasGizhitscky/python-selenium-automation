@@ -3,6 +3,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 
+sell_icon = By.XPATH,"//div[@id='nav-xshop']/a[text()='Sell']"
+start_selling_button = By.XPATH,"//div[@class='align-center']/a"
+
 
 @given('Open Amazon page')
 def open_amazon(context):
@@ -11,9 +14,9 @@ def open_amazon(context):
 
 @when('Click on start selling button')
 def click_on_sell(context):
-    context.driver.find_element(By.XPATH, "//div[@id='nav-xshop']/a[text()='Sell']").click()
+    context.driver.find_element(*sell_icon).click()
     sleep(1)
-    context.driver.find_element(By.XPATH, '//*[@id="eventColor"]/div[3]/div/div/div[1]/div/div[1]/div[3]/div/div/a').click()
+    context.driver.find_element(*start_selling_button).click()
     sleep(1)
 
 @then('Verify Sign in page is opened')
