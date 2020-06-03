@@ -1,0 +1,13 @@
+"//i[@aria-label='Amazon']" #Amazon logo
+"//input[@id='continue']" #Continue button
+"//a/span[@class='a-expander-prompt']" #Need help button
+"//div/a[text()='Conditions of Use']" #Conditions of Use
+"//a[@id='createAccountSubmit']" #Create account button
+"//a[text()='Privacy Notice']" # Privacy Notice
+
+
+[i.a-icon.a-icon-logo] # Amazon logo
+[h1.a-spacing-small] # Create account
+[input#ap_customer_name] # Your name field
+[input#ap_email] # Email Field
+[input#continue.a-button-input] Create account button
