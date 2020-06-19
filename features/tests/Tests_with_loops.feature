@@ -10,3 +10,8 @@ Feature: Test loops
   Scenario: Test case to verify, every product on the page has a text ‘Regular’ and a product name
     Given Open Amazon Wholefoodsdeals page
     Then Verify that every product has name and regular price
+
+
+   Scenario: Test case for links in top nav menu
+     Given Open Amazon page
+     Then Verify that every link in top nav menu leads to appropriate page
