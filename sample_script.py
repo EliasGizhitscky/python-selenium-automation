@@ -1,12 +1,16 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+
+
 
 # init driver
 driver = webdriver.Chrome()
 
 # open the url
 driver.get('https://www.google.com/')
+driver.wait = WebDriverWait(driver, 10)
 
 search = driver.find_element(By.NAME, 'q')
 search.clear()
